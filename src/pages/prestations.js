@@ -4,11 +4,11 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Projets = () => (
+const Prestations = () => (
 	<Layout>
-		<SEO title="Projets" />
-		<h1>Projets</h1>
+		<SEO title="Prestations" />
+		<h1>Prestations</h1>
 	</Layout>
 );
 
-export default Projets;
+export default Prestations;

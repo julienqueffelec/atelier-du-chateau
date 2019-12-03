@@ -12,12 +12,13 @@ const Header = ({ siteTitle }) => (
 		<div
 			style={{
 				margin: '0 auto',
-				maxWidth: 200,
+				width: 200,
 				padding: '1.45rem 1.0875rem'
 			}}
 		>
 			<h1 style={{ margin: 0 }}>
 				<Link
+					aria-label="Logo"
 					to="/"
 					style={{
 						color: 'white',
