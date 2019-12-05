@@ -13,6 +13,10 @@ exports.handler = async (event, context, callback) => {
 		})
 		.join('<br><br>');
 
+	console.log(SENDGRID_TO_EMAIL);
+	console.log(email);
+	console.log(body);
+
 	const msg = {
 		to: SENDGRID_TO_EMAIL,
 		from: email,
