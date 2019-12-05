@@ -638,20 +638,25 @@ pre tt:after {
 
 .page {
 	display: flex;
-	width: 100%;
+	width: 70%;
+	margin: 0 auto;
 }
 
 .sidebar {
-	width: 25%;
+	width: 20%;
 }
 
 .sidebar .active {
 	color: #909090;
 }
 
+.wrapper {
+	width: 80%;
+	flex: 1 0 auto;
+}
+
 .content {
 	width: 75%;
-	flex: 1 0 auto;
 }
 
 footer .infos {
@@ -668,4 +673,87 @@ footer .social {
 footer .social .facebook,
 footer .social .instagram {
 	width: 20px;
+}
+
+.container {
+	position: relative;
+	width: 50%;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease;
+	background-color: #fff;
+}
+
+.container:hover .overlay {
+	opacity: 0.8;
+}
+
+.text {
+	color: #000;
+	font-size: 15px;
+	position: absolute;
+	top: 50%;
+	font-weight: 700;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.city {
+	color: #000;
+	font-size: 15px;
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.home_image {
+	width: 200px;
+}
+
+.prestations {
+	font-family: 'Avenir Next Condensed';
+	font-weight: 600;
+}
+.prestations p {
+	margin-bottom: 0.4em;
+	padding: 5px 0;
+}
+.prestations--center {
+	text-align: center;
+}
+
+.prestations__title {
+	font-family: 'OratorStd';
+	text-transform: uppercase;
+}
+
+.prestations__contact {
+	margin-top: 40px;
+}
+
+.prestations__contact p {
+	text-align: center;
+	margin-bottom: 0;
 }
