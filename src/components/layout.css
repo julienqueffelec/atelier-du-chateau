@@ -645,7 +645,7 @@ pre tt:after {
 	margin: 0 auto;
 }
 
-.sidebar {
+.bloc-sidebar {
 	max-width: 20%;
 	justify-content: left;
 }
@@ -774,19 +774,27 @@ footer .social .instagram {
 	display: none;
 }
 
+.bloc-menu-mobile {
+	display: none;
+}
+
+.bloc-sidebar {
+	display: block;
+}
+
 @media (max-width: 767px) {
-	.sidebar {
+	.bloc-sidebar {
 		display: none;
 	}
 	.menu-toggle {
 		display: initial; /* display the toggle, previously hidden */
 	}
+	.bloc-menu-mobile {
+		display: block;
+	}
 }
 
 @media (max-width: 950px) {
-	.sidebar {
-		max-width: 30%;
-	}
 	.wrapper {
 		max-width: 70%;
 	}
