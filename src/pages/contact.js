@@ -82,6 +82,12 @@ function Contact() {
 			<div style={{ width: '600px', height: '300px', position: 'relative' }}>
 				<MapContainer></MapContainer>
 			</div>
+			<div>
+				<p>Pour tout renseignements, n'hésitez pas à me contacter :</p>
+				<p>Oana Manuel</p>
+				<p>07 85 58 31 68</p>
+				<p>latelierduchateau@outlook.fr</p>
+			</div>
 		</Layout>
 	);
 }

@@ -56,6 +56,9 @@ a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 }
+a:visited {
+	color: #000;
+}
 a:active,
 a:hover {
 	outline-width: 0;
@@ -347,8 +350,7 @@ hgroup {
 	margin-bottom: 1.45rem;
 }
 ul {
-	margin-left: 1.45rem;
-	margin-right: 0;
+	margin-right: 1.45rem;
 	margin-top: 0;
 	padding-bottom: 0;
 	padding-left: 0;
@@ -638,12 +640,14 @@ pre tt:after {
 
 .page {
 	display: flex;
-	width: 70%;
+	max-width: 1100px;
+	justify-content: center;
 	margin: 0 auto;
 }
 
 .sidebar {
-	width: 20%;
+	max-width: 20%;
+	justify-content: left;
 }
 
 .sidebar .active {
@@ -651,12 +655,13 @@ pre tt:after {
 }
 
 .wrapper {
-	width: 80%;
+	max-width: 80%;
 	flex: 1 0 auto;
+	overflow: auto;
 }
 
 .content {
-	width: 75%;
+	width: 100%;
 }
 
 footer .infos {
@@ -756,4 +761,167 @@ footer .social .instagram {
 .prestations__contact p {
 	text-align: center;
 	margin-bottom: 0;
+}
+
+.prestations__links {
+	display: flex;
+}
+.prestations__links .container {
+	padding: 10px;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+@media (max-width: 767px) {
+	.sidebar {
+		display: none;
+	}
+	.menu-toggle {
+		display: initial; /* display the toggle, previously hidden */
+	}
+}
+
+@media (max-width: 950px) {
+	.sidebar {
+		max-width: 30%;
+	}
+	.wrapper {
+		max-width: 70%;
+	}
+	.menu-toggle {
+		display: initial; /* display the toggle, previously hidden */
+	}
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+	position: fixed;
+	width: 36px;
+	height: 30px;
+	left: 36px;
+	top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+	background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+	height: 24px;
+	width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+	background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+	background: #373a47;
+	padding: 2.5em 1.5em 0;
+	font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+	fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+	color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Individual item */
+.bm-item {
+	display: inline-block;
+
+	/* Our sidebar item styling */
+	text-decoration: none;
+	margin-bottom: 10px;
+	color: #d1d1d1;
+	transition: color 0.2s;
+}
+
+.project_1 {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -8px; /* Adjustment for the gutter */
+	width: 100%;
+}
+
+.project_1 .container {
+	flex: auto;
+	min-width: 150px;
+	margin: 0 8px 8px 0; /* Some gutter */
+}
+
+.project_1 .container:nth-child(1) {
+	width: 200px;
+}
+
+.project_1 .container:nth-child(2) {
+	width: 200px;
+}
+.project_1 .container:nth-child(3) {
+	width: 200px;
+}
+.project_1 .container:nth-child(4) {
+	width: 100%;
+}
+
+.project_2 {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: 80px;
+	margin-left: -8px; /* Adjustment for the gutter */
+	width: 100%;
+}
+.project_2 .container {
+	flex: auto;
+	min-width: 150px;
+	margin: 0 8px 8px 0; /* Some gutter */
+}
+.project_2 .container:nth-child(1) {
+	width: 300px;
+}
+.project_2 .container:nth-child(2) {
+	width: 300px;
+}
+.project_2 .container:nth-child(3) {
+	width: 200px;
+}
+.project_2 .container:nth-child(4) {
+	width: 400px;
+}
+
+/* page project */
+.projects {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -8px; /* Adjustment for the gutter */
+	width: 100%;
+}
+.projects .container {
+	flex: auto;
+	width: auto;
+	min-width: 150px;
+	margin: 0 8px 8px 0; /* Some gutter */
+}
+.project_2 .container:nth-child(1) {
+	width: 200px;
+}
+.projects .project__title {
+	font-family: 'Avenir Next Condensed';
+	text-align: center;
 }

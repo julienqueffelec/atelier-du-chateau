@@ -1,20 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import { slide as Menu } from 'react-burger-menu';
 import Header from './header';
 import Sidebar from './sidebar';
+import Nav from './nav';
 import Footer from './footer';
 import './layout.css';
 
 const Layout = ({ children }) => {
+	const [isOpen, setisOpen] = useState(false);
+	const [width, setWidth] = React.useState(window.innerWidth);
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -25,23 +21,29 @@ const Layout = ({ children }) => {
 		}
 	`);
 
+	const updateWidthAndHeight = () => {
+		setWidth(window.innerWidth);
+	};
+
+	React.useEffect(() => {
+		window.addEventListener('resize', updateWidthAndHeight);
+		return () => window.removeEventListener('resize', updateWidthAndHeight);
+	});
+
 	return (
-		<>
+		<div id="app">
+			{width < 768 && <Nav pageWrapId={'page-wrap'} outerContainerId={'app'} />}
+
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div className="page">
-				<Sidebar classname="sidebar" />
-
-				<div className="wrapper">
+				{width >= 768 && <Sidebar />}
+				<div id="page-wrap" className="wrapper">
 					<main className="content">{children}</main>
 				</div>
 			</div>
 			<Footer />
-		</>
+		</div>
 	);
-};
-
-Layout.propTypes = {
-	children: PropTypes.node.isRequired
 };
 
 export default Layout;

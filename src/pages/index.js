@@ -14,16 +14,29 @@ const IndexPage = () => (
 					<div class="city">Brest</div>
 				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="2.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Rénovation d'une maison de 1875</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="3.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Rénovation d'une maison de 1875</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="4.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Rénovation d'une maison de 1875</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
 		</div>
+
 		<div className="project_2">
 			<div class="container">
 				<Image filename="5.jpg"></Image>
@@ -32,14 +45,26 @@ const IndexPage = () => (
 					<div class="city">Brest</div>
 				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="6.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Projet en cours</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="7.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Projet en cours</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
-			<div className="home_image">
+			<div class="container">
 				<Image filename="8.jpg"></Image>
+				<div class="overlay">
+					<div class="text">Projet en cours</div>
+					<div class="city">Brest</div>
+				</div>
 			</div>
 		</div>
 	</Layout>

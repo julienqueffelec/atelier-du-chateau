@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
+import Image from '../components/image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -80,6 +80,34 @@ const Prestations = () => (
 				<p>Oana MANUEL</p>
 				<p>07 85 58 31 68</p>
 				<p>latelierduchateau@outlook.fr</p>
+			</div>
+		</div>
+		<div>
+			<div className="prestations__links">
+				<div class="container">
+					<Link to="/">
+						<Image filename="1.jpg"></Image>
+						<div class="overlay">
+							<div class="text">Réalisations</div>
+						</div>
+					</Link>
+				</div>
+				<div class="container">
+					<Link to="/projets">
+						<Image filename="salle de bain0.jpg"></Image>
+						<div class="overlay">
+							<div class="text">Projet en cours</div>
+						</div>
+					</Link>
+				</div>
+				<div class="container">
+					<Link to="/atelier">
+						<Image filename="atelier.jpg"></Image>
+						<div class="overlay">
+							<div class="text">L'atelier</div>
+						</div>
+					</Link>
+				</div>
 			</div>
 		</div>
 	</Layout>
