@@ -9,8 +9,14 @@ import Footer from './footer';
 import './layout.css';
 
 const Layout = ({ children }) => {
+	let defaultWidth;
 	const [isOpen, setisOpen] = useState(false);
-	const [width, setWidth] = React.useState(window.innerWidth);
+
+	if (typeof window !== 'undefined') {
+		defaultWidth = window.innerWidth;
+	}
+
+	const [width, setWidth] = useState(defaultWidth);
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
