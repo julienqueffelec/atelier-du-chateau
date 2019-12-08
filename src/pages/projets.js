@@ -8,20 +8,20 @@ const Projets = () => (
 	<Layout>
 		<SEO title="Projets" />
 		<div className="projects">
-			<div class="container">
+			<div className="container">
 				<Link to="/projet/brest-centre-ville">
 					<Image filename="project1.jpg"></Image>
-					<div class="overlay">
-						<div class="text">Voir le projet</div>
+					<div className="overlay">
+						<div className="text">Voir le projet</div>
 					</div>
 					<div className="project__title">Brest - Centre ville</div>
 				</Link>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Link to="/projet/brest-guipavas">
 					<Image filename="7.jpg"></Image>
-					<div class="overlay">
-						<div class="text">Voir le projet</div>
+					<div className="overlay">
+						<div className="text">Voir le projet</div>
 					</div>
 					<div className="project__title">Brest - Guipavas</div>
 				</Link>

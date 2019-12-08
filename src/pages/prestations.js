@@ -84,27 +84,27 @@ const Prestations = () => (
 		</div>
 		<div>
 			<div className="prestations__links">
-				<div class="container">
+				<div className="container">
 					<Link to="/">
 						<Image filename="1.jpg"></Image>
-						<div class="overlay">
-							<div class="text">Réalisations</div>
+						<div className="overlay">
+							<div className="text">Réalisations</div>
 						</div>
 					</Link>
 				</div>
-				<div class="container">
+				<div className="container">
 					<Link to="/projets">
 						<Image filename="salle de bain0.jpg"></Image>
-						<div class="overlay">
-							<div class="text">Projet en cours</div>
+						<div className="overlay">
+							<div className="text">Projet en cours</div>
 						</div>
 					</Link>
 				</div>
-				<div class="container">
+				<div className="container">
 					<Link to="/atelier">
 						<Image filename="atelier.jpg"></Image>
-						<div class="overlay">
-							<div class="text">L'atelier</div>
+						<div className="overlay">
+							<div className="text">L'atelier</div>
 						</div>
 					</Link>
 				</div>

@@ -7,63 +7,63 @@ const IndexPage = () => (
 	<Layout>
 		<SEO title="Accueil" />
 		<div className="project_1">
-			<div class="container">
+			<div className="container">
 				<Image filename="1.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Rénovation d'une maison de 1875</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Rénovation d'une maison de 1875</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="2.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Rénovation d'une maison de 1875</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Rénovation d'une maison de 1875</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="3.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Rénovation d'une maison de 1875</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Rénovation d'une maison de 1875</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="4.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Rénovation d'une maison de 1875</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Rénovation d'une maison de 1875</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
 		</div>
 
 		<div className="project_2">
-			<div class="container">
+			<div className="container">
 				<Image filename="5.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Projet en cours</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Projet en cours</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="6.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Projet en cours</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Projet en cours</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="7.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Projet en cours</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Projet en cours</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="8.jpg"></Image>
-				<div class="overlay">
-					<div class="text">Projet en cours</div>
-					<div class="city">Brest</div>
+				<div className="overlay">
+					<div className="text">Projet en cours</div>
+					<div className="city">Brest</div>
 				</div>
 			</div>
 		</div>

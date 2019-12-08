@@ -16,13 +16,13 @@ const BrestGuipavas = () => (
 			lieux de vie de la maison.
 		</div>
 		<div className="project">
-			<div class="container">
+			<div className="container">
 				<Image filename="1.jpg"></Image>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="1.jpg"></Image>
 			</div>
-			<div class="container">
+			<div className="container">
 				<Image filename="1.jpg"></Image>
 			</div>
 		</div>
