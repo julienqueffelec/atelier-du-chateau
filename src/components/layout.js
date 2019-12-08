@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
@@ -12,11 +12,6 @@ const Layout = ({ children }) => {
 	let defaultWidth;
 	const [isOpen, setisOpen] = useState(false);
 
-	if (typeof window !== 'undefined') {
-		defaultWidth = window.innerWidth;
-	}
-
-	const [width, setWidth] = useState(defaultWidth);
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {
@@ -27,22 +22,30 @@ const Layout = ({ children }) => {
 		}
 	`);
 
-	const updateWidthAndHeight = () => {
-		setWidth(window.innerWidth);
-	};
+	function useWindowWidth() {
+		const [width, setWidth] = useState(window.innerWidth);
 
-	React.useEffect(() => {
-		window.addEventListener('resize', updateWidthAndHeight);
-		return () => window.removeEventListener('resize', updateWidthAndHeight);
-	});
+		useEffect(() => {
+			const handleResize = () => setWidth(window.innerWidth);
+			window.addEventListener('resize', handleResize);
+			return () => {
+				window.removeEventListener('resize', handleResize);
+			};
+		});
 
+		return width;
+	}
+
+	const currentWidth = useWindowWidth();
 	return (
 		<div id="app">
-			{width < 768 && <Nav pageWrapId={'page-wrap'} outerContainerId={'app'} />}
+			{currentWidth < 768 && (
+				<Nav pageWrapId={'page-wrap'} outerContainerId={'app'} />
+			)}
 
 			<Header siteTitle={data.site.siteMetadata.title} />
 			<div className="page">
-				{width >= 768 && <Sidebar />}
+				{currentWidth >= 768 && <Sidebar />}
 				<div id="page-wrap" className="wrapper">
 					<main className="content">{children}</main>
 				</div>
