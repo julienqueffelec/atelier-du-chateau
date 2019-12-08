@@ -905,7 +905,7 @@ footer .social .instagram {
 	width: 400px;
 }
 
-/* page project */
+/* page projects */
 .projects {
 	display: flex;
 	flex-flow: row wrap;
@@ -924,4 +924,28 @@ footer .social .instagram {
 .projects .project__title {
 	font-family: 'Avenir Next Condensed';
 	text-align: center;
+	color: #000;
+}
+
+/* single project */
+.project {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: -8px; /* Adjustment for the gutter */
+	width: 100%;
+}
+.project .container .gatsby-image-wrapper {
+	height: 100%;
+}
+.project .container {
+	width: 33%;
+	height: 300px;
+	flex: auto;
+	width: auto;
+	padding: 10px;
+	min-width: 150px;
+	margin: 0 8px 8px 0; /* Some gutter */
+}
+.project__content {
+	font-family: 'Avenir Next Condensed';
 }
