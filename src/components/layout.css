@@ -154,6 +154,10 @@ button::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
 }
+input:focus,
+textarea:focus {
+	outline: none;
+}
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring,
