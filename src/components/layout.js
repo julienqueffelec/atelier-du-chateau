@@ -8,38 +8,6 @@ import Nav from './nav';
 import Footer from './footer';
 import './layout.css';
 
-const Layout = ({ children }) => {
-	const [isOpen, setisOpen] = useState(false);
-
-	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`);
-	const size = useWindowSize();
-
-	return (
-		<div id="app">
-			{size.width < 768 && (
-				<Nav pageWrapId={'page-wrap'} outerContainerId={'app'} />
-			)}
-
-			<Header siteTitle={data.site.siteMetadata.title} />
-			<div className="page">
-				{size.width >= 768 && <Sidebar />}
-				<div id="page-wrap" className="wrapper">
-					<main className="content">{children}</main>
-				</div>
-			</div>
-			<Footer />
-		</div>
-	);
-};
-
 function useWindowSize() {
 	const isClient = typeof window === 'object';
 
@@ -67,5 +35,38 @@ function useWindowSize() {
 
 	return windowSize;
 }
+
+const Layout = ({ children }) => {
+	const [isOpen, setisOpen] = useState(false);
+
+	const data = useStaticQuery(graphql`
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`);
+	const size = useWindowSize();
+	console.log(size);
+
+	return (
+		<div id="app">
+			{size.width < 768 && (
+				<Nav pageWrapId={'page-wrap'} outerContainerId={'app'} />
+			)}
+
+			<Header siteTitle={data.site.siteMetadata.title} />
+			<div className="page">
+				{size.width >= 768 && <Sidebar />}
+				<div id="page-wrap" className="wrapper">
+					<main className="content">{children}</main>
+				</div>
+			</div>
+			<Footer />
+		</div>
+	);
+};
 
 export default Layout;
