@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import MapContainer from '../components/map';
+import Image from '../components/image';
 
 function Contact() {
 	const [formState, setFormState] = useState({
@@ -41,7 +41,7 @@ function Contact() {
 			<form
 				name="contact"
 				method="post"
-				action="/thanks/"
+				action="/thanks"
 				data-netlify="true"
 				data-netlify-honeypot="bot-field"
 				onSubmit={onSubmit}
@@ -79,8 +79,8 @@ function Contact() {
 					<button type="submit">Send</button>
 				</p>
 			</form>
-			<div style={{ width: '600px', height: '300px', position: 'relative' }}>
-				<MapContainer></MapContainer>
+			<div>
+				<Image filename="map.png"></Image>
 			</div>
 			<div>
 				<p>Pour tout renseignements, n'hésitez pas à me contacter :</p>

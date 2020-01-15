@@ -871,74 +871,19 @@ footer .social .instagram {
 	transition: color 0.2s;
 }
 
-.project_1 {
-	display: flex;
-	flex-flow: row wrap;
-	margin-left: -8px; /* Adjustment for the gutter */
+/* hp page */
+.hp__projects .container {
 	width: 100%;
-}
-
-.project_1 .container {
-	flex: auto;
-	min-width: 150px;
-	margin: 0 8px 8px 0; /* Some gutter */
-}
-
-.project_1 .container:nth-child(1) {
-	width: 200px;
-}
-
-.project_1 .container:nth-child(2) {
-	width: 200px;
-}
-.project_1 .container:nth-child(3) {
-	width: 200px;
-}
-.project_1 .container:nth-child(4) {
-	width: 100%;
-}
-
-.project_2 {
-	display: flex;
-	flex-flow: row wrap;
-	margin-top: 80px;
-	margin-left: -8px; /* Adjustment for the gutter */
-	width: 100%;
-}
-.project_2 .container {
-	flex: auto;
-	min-width: 150px;
-	margin: 0 8px 8px 0; /* Some gutter */
-}
-.project_2 .container:nth-child(1) {
-	width: 300px;
-}
-.project_2 .container:nth-child(2) {
-	width: 300px;
-}
-.project_2 .container:nth-child(3) {
-	width: 200px;
-}
-.project_2 .container:nth-child(4) {
-	width: 400px;
 }
 
 /* page projects */
 .projects {
 	display: flex;
-	flex-flow: row wrap;
-	margin-left: -8px; /* Adjustment for the gutter */
-	width: 100%;
 }
-.projects .container {
-	flex: auto;
-	width: auto;
-	min-width: 150px;
-	margin: 0 8px 8px 0; /* Some gutter */
+.projects .project {
+	padding: 0 20px;
 }
-.project_2 .container:nth-child(1) {
-	width: 200px;
-}
+
 .projects .project__title {
 	font-family: 'Avenir Next Condensed';
 	text-align: center;
@@ -949,7 +894,7 @@ footer .social .instagram {
 .project {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: -8px; /* Adjustment for the gutter */
+	margin-left: -8px;
 	width: 100%;
 }
 .project .container .gatsby-image-wrapper {
@@ -957,13 +902,20 @@ footer .social .instagram {
 }
 .project .container {
 	width: 33%;
-	height: 300px;
 	flex: auto;
 	width: auto;
 	padding: 10px;
 	min-width: 150px;
-	margin: 0 8px 8px 0; /* Some gutter */
+	margin: 0 8px 8px 0;
 }
 .project__content {
 	font-family: 'Avenir Next Condensed';
+}
+
+.atelier {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 }

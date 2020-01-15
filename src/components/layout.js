@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
@@ -9,8 +9,6 @@ import Footer from './footer';
 import './layout.css';
 
 const Layout = ({ children }) => {
-	const [isOpen, setisOpen] = useState(false);
-
 	const data = useStaticQuery(graphql`
 		query SiteTitleQuery {
 			site {

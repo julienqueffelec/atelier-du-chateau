@@ -5,6 +5,9 @@ import { Link } from 'gatsby';
 export default props => {
 	return (
 		<Menu {...props}>
+			<Link aria-label="Accueil page" to="/" activeClassName="active">
+				Accueil
+			</Link>
 			<Link aria-label="Atelier page" to="/atelier" activeClassName="active">
 				Atelier
 			</Link>

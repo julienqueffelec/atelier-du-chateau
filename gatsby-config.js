@@ -29,6 +29,18 @@ module.exports = {
 		},
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
-		'gatsby-plugin-robots-txt'
+		'gatsby-plugin-robots-txt',
+		{
+			resolve: 'gatsby-source-contentful',
+			options: {
+				spaceId: 'w6i432qz8hhb',
+				accessToken: 'aW0rJPp_aID7kxOQxwqToJmOJNvIMDZKSZREchvSs9Y'
+			}
+		},
+		{
+			resolve: 'gatsby-transformer-remark'
+		},
+		'@contentful/gatsby-transformer-contentful-richtext',
+		'gatsby-plugin-styled-components'
 	]
 };

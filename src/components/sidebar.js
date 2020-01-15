@@ -6,6 +6,11 @@ const Sidebar = () => {
 		<div className="sidebar">
 			<ul>
 				<li>
+					<Link aria-label="Accueil page" to="/" activeClassName="active">
+						Accueil
+					</Link>
+				</li>
+				<li>
 					<Link
 						aria-label="Atelier page"
 						to="/atelier"
