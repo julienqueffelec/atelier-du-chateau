@@ -942,3 +942,8 @@ footer .social .instagram {
 .contact_form textarea {
 	border: 1px solid #000;
 }
+
+[data-reach-dialog-content] {
+	width: 600px;
+	margin: 2vh auto;
+}

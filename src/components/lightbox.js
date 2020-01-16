@@ -12,6 +12,8 @@ const LightboxContainer = styled.div`
 `;
 
 const DialogStyles = styled.div`
+	width: 100%;
+	text-align: center;
 	button {
 		background-color: #000;
 		color: #fff;

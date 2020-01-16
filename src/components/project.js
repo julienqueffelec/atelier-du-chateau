@@ -60,7 +60,7 @@ export const pageQuery = graphql`
 				}
 			}
 			image {
-				fixed {
+				fixed(width: 600) {
 					src
 				}
 			}
