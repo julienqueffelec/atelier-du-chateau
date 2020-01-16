@@ -14,7 +14,7 @@ const IndexPage = props => {
 
 			{edges.map(hp => {
 				return (
-					<div className="hp__projects">
+					<div key={hp.node.lienProjet} className="hp__projects">
 						<Link to={hp.node.lienProjet}>
 							<div className="container">
 								<img src={hp.node.imageDeProjet.fixed.src} />

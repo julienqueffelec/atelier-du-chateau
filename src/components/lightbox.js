@@ -11,6 +11,15 @@ const LightboxContainer = styled.div`
 	grid-gap: 5px;
 `;
 
+const DialogStyles = styled.div`
+	button {
+		background-color: #000;
+		color: #fff;
+		border: none;
+		padding: 5px;
+	}
+`;
+
 const PreviewButton = styled.button`
 	background: transparent;
 	border: none;
@@ -51,13 +60,15 @@ export default class Lightbox extends Component {
 				</LightboxContainer>
 				{showLightbox && (
 					<Dialog aria-label={selectedImage.fixed.src}>
-						<img src={selectedImage.fixed.src} />
-						<button
-							type="button"
-							onClick={() => this.setState({ showLightbox: false })}
-						>
-							Fermer
-						</button>
+						<DialogStyles>
+							<img src={selectedImage.fixed.src} />
+							<button
+								type="button"
+								onClick={() => this.setState({ showLightbox: false })}
+							>
+								Fermer
+							</button>
+						</DialogStyles>
 					</Dialog>
 				)}
 			</Fragment>

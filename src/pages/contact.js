@@ -45,6 +45,7 @@ function Contact() {
 				data-netlify="true"
 				data-netlify-honeypot="bot-field"
 				onSubmit={onSubmit}
+				className="contact_form"
 			>
 				{/* The `form-name` hidden field is required to support form submissions without JavaScript */}
 				<input type="hidden" name="form-name" value="contact" />
@@ -56,27 +57,27 @@ function Contact() {
 				</p>
 				<p>
 					<label>
-						Your name:
+						Votre nom
 						<br />
 						<input type="text" name="name" onChange={handleChange} />
 					</label>
 				</p>
 				<p>
 					<label>
-						Your email:
+						Votre email
 						<br />
 						<input type="email" name="email" onChange={handleChange} />
 					</label>
 				</p>
 				<p>
 					<label>
-						Message:
+						Message
 						<br />
 						<textarea name="message" onChange={handleChange} />
 					</label>
 				</p>
 				<p>
-					<button type="submit">Send</button>
+					<button type="submit">Envoyer</button>
 				</p>
 			</form>
 			<div>

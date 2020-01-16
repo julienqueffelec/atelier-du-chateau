@@ -5,6 +5,30 @@ import Img from 'gatsby-image';
 import Lightbox from './lightbox';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+	font-weight: bold;
+	font-family: 'OratorStd';
+	text-transform: uppercase;
+	font-size: 20px;
+`;
+
+const Content = styled.div`
+	font-family: 'Avenir Next Condensed';
+	font-size: 15px;
+	color: #000;
+	p {
+		margin-bottom: 0;
+		font-weight: 600;
+	}
+`;
+
+const LightboxStyles = styled.div`
+	button:hover {
+		cursor: pointer;
+	}
+`;
 
 const Project = props => {
 	const { title, slug, content, image } = props.data.contentfulProjects;
@@ -12,11 +36,13 @@ const Project = props => {
 	return (
 		<Layout>
 			<SEO title={title} />
-			{title}
-			<div
+			<Title>{title}</Title>
+			<Content
 				dangerouslySetInnerHTML={{ __html: content.childContentfulRichText.html }}
-			></div>
-			<Lightbox projectImg={image}></Lightbox>
+			></Content>
+			<LightboxStyles>
+				<Lightbox projectImg={image}></Lightbox>
+			</LightboxStyles>
 		</Layout>
 	);
 };

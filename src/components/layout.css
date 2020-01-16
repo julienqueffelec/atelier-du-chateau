@@ -749,7 +749,18 @@ footer .social .instagram {
 }
 .prestations p {
 	margin-bottom: 0.4em;
-	padding: 5px 0;
+}
+.prestations h3 {
+	margin: 20px 0 0 0;
+	font-family: 'OratorStd';
+}
+.prestations li p {
+	margin: 0;
+	padding: 0;
+}
+.prestations li {
+	margin: 0;
+	padding: 0;
 }
 .prestations--center {
 	text-align: center;
@@ -918,4 +929,16 @@ footer .social .instagram {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
+}
+
+.contact_form button {
+	background-color: #000;
+	color: #fff;
+	border: none;
+	padding: 10px;
+}
+
+.contact_form input,
+.contact_form textarea {
+	border: 1px solid #000;
 }
