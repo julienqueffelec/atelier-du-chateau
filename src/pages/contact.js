@@ -26,6 +26,7 @@ function Contact() {
 			}
 
 			//all OK
+			alert('ok');
 		} catch (e) {
 			//error
 		}
