@@ -3,6 +3,11 @@ import { Link, graphql } from 'gatsby';
 import Image from '../components/image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import styled from 'styled-components';
+
+const LinkContainer = styled.div`
+	margin-top: 50px;
+`;
 
 const Prestations = props => {
 	const { nodes } = props.data.allContentfulPrestationsPrestationsRichTextNode;
@@ -14,7 +19,6 @@ const Prestations = props => {
 		lienImage2,
 		lienImage3
 	} = props.data.allContentfulPrestations.edges[0].node;
-	console.log(props.data);
 
 	return (
 		<Layout>
@@ -27,7 +31,7 @@ const Prestations = props => {
 				></div>
 			</div>
 
-			<div>
+			<LinkContainer>
 				<div className="prestations__links">
 					<div className="container">
 						<Link to={lienImage1}>
@@ -54,7 +58,7 @@ const Prestations = props => {
 						</Link>
 					</div>
 				</div>
-			</div>
+			</LinkContainer>
 		</Layout>
 	);
 };

@@ -646,14 +646,26 @@ pre tt:after {
 
 .page {
 	display: flex;
-	max-width: 1100px;
+	max-width: 70%;
 	justify-content: center;
 	margin: 0 auto;
 }
 
 .bloc-sidebar {
-	max-width: 20%;
-	justify-content: left;
+	position: absolute;
+	left: 14%;
+}
+
+@media only screen and (max-width: 1750px) {
+	.bloc-sidebar {
+		left: 12%;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.bloc-sidebar {
+		left: 8%;
+	}
 }
 
 .sidebar .active {
@@ -793,10 +805,6 @@ footer .social .instagram {
 
 .bloc-menu-mobile {
 	display: none;
-}
-
-.bloc-sidebar {
-	display: block;
 }
 
 @media (max-width: 767px) {
