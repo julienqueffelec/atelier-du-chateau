@@ -11,6 +11,7 @@ function Contact() {
 		subject: '',
 		message: ''
 	});
+	const [send, setSend] = useState(false);
 
 	function onSubmit(e) {
 		e.preventDefault();
@@ -20,13 +21,7 @@ function Contact() {
 				body: JSON.stringify(formState)
 			});
 
-			if (!response.ok) {
-				//not 200 response
-				return;
-			}
-
-			//all OK
-			alert('ok');
+			setSend(true);
 		} catch (e) {
 			//error
 		}
@@ -56,6 +51,7 @@ function Contact() {
 						<input name="bot-field" onChange={handleChange} />
 					</label>
 				</p>
+				{send && <p>Votre message a été envoyé.</p>}
 				<p>
 					<label>
 						Votre nom
