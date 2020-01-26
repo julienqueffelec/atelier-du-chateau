@@ -17,7 +17,7 @@ export default props => {
 			</Link>
 
 			<Link aria-label="Prestation page" to="/prestations" activeClassName="active">
-				Préstations
+				Prestations
 			</Link>
 
 			<Link aria-label="Contact page" to="/contact" activeClassName="active">

@@ -34,7 +34,7 @@ const Sidebar = () => {
 						to="/prestations"
 						activeClassName="active"
 					>
-						Préstations
+						Prestations
 					</Link>
 				</li>
 				<li>

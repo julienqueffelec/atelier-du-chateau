@@ -40,7 +40,7 @@ export default class Lightbox extends Component {
 	}
 
 	render() {
-		const { projectImg } = this.props;
+		const { projectImg, projectTitle } = this.props;
 		const { selectedImage, showLightbox } = this.state;
 		return (
 			<Fragment>
@@ -56,7 +56,11 @@ export default class Lightbox extends Component {
 								})
 							}
 						>
-							<img key={image.fixed.src} src={image.fixed.src} />
+							<img
+								alt={projectTitle}
+								key={image.fixed.src}
+								src={image.fixed.src}
+							/>
 						</PreviewButton>
 					))}
 				</LightboxContainer>

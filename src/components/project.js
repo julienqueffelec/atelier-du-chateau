@@ -41,7 +41,7 @@ const Project = props => {
 				dangerouslySetInnerHTML={{ __html: content.childContentfulRichText.html }}
 			></Content>
 			<LightboxStyles>
-				<Lightbox projectImg={image}></Lightbox>
+				<Lightbox projectTitle={title} projectImg={image}></Lightbox>
 			</LightboxStyles>
 		</Layout>
 	);

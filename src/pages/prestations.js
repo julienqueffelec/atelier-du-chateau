@@ -35,7 +35,7 @@ const Prestations = props => {
 				<div className="prestations__links">
 					<div className="container">
 						<Link to={lienImage1}>
-							<img src={image1.fixed.src} />
+							<img alt={image1.title} src={image1.fixed.src} />
 							<div className="overlay">
 								<div className="text">{image1.title}</div>
 							</div>
@@ -43,7 +43,7 @@ const Prestations = props => {
 					</div>
 					<div className="container">
 						<Link to={lienImage2}>
-							<img src={image2.fixed.src} />
+							<img alt={image2.title} src={image2.fixed.src} />
 							<div className="overlay">
 								<div className="text">{image2.title}</div>
 							</div>
@@ -51,7 +51,7 @@ const Prestations = props => {
 					</div>
 					<div className="container">
 						<Link to={lienImage3}>
-							<img src={image3.fixed.src}></img>
+							<img alt={image3.title} src={image3.fixed.src}></img>
 							<div className="overlay">
 								<div className="text">{image3.title}</div>
 							</div>

@@ -4,22 +4,23 @@ import SEO from '../components/seo';
 import Image from '../components/image';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
+
+const ImageStyle = styled.div`
+	width: 400px;
+`;
 
 const Atelier = props => {
 	const { nodes } = props.data.allContentfulAtelierContentRichTextNode;
-	const { src } = props.data.allContentfulAtelier.edges[0].node.image.fixed;
+	const { fixed, title } = props.data.allContentfulAtelier.edges[0].node.image;
 
 	return (
 		<Layout>
 			<SEO title="Atelier" />
 			<div className="atelier">
-				<div
-					style={{
-						width: 400
-					}}
-				>
-					<img src={src}></img>
-				</div>
+				<ImageStyle>
+					<img alt={title} src={fixed.src}></img>
+				</ImageStyle>
 				<div
 					dangerouslySetInnerHTML={{
 						__html: nodes[0].childContentfulRichText.html
@@ -45,6 +46,7 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					image {
+						title
 						fixed {
 							src
 						}

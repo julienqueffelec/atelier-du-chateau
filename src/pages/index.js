@@ -17,10 +17,13 @@ const IndexPage = props => {
 					<div key={hp.node.lienProjet} className="hp__projects">
 						<Link to={hp.node.lienProjet}>
 							<div className="container">
-								<img src={hp.node.imageDeProjet.fixed.src} />
+								<img
+									alt={hp.node.imageDeProjet.title}
+									src={hp.node.imageDeProjet.fixed.src}
+								/>
 								<div className="overlay">
 									<div className="text">
-										Rénovation d'une maison de 1875
+										{hp.node.imageDeProjet.title}
 									</div>
 								</div>
 							</div>
